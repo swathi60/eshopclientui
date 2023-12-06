@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrationpage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  
+    <style>
+        body{background-color: rgb(31, 52, 108);}
+        .Boxm{padding: 2% 10% 0% 35%;}
+        .box1{background-color: white; width: 60%; height: 50%; border: 0.5px solid gray; 
+            border-radius: 5px; box-shadow: 2px 2px 4px gray; margin: 5px; padding: 5px;
+          }
+          input{border-radius: 2px; background-color: gray;}
+          .btn1{ border: 1px solid transparent; box-shadow: 2px 2px 6px blue;}
+          .gender{margin: 4%; padding: 2%;}
+          .che{margin-left: 5%;}  .tx1{padding-left: 2%;}
+          .form-control{background-color: rgba(128, 128, 128, 0.263);}
+
+        @media screen and (min-width:100px) and (max-width:760px){
+            .tx1{font-size: 0.8em;}
+            .Boxm{margin: 3% 10% 4% 10%; padding: 5%;}
+            
+            .box1{
+                width: 60vw; height: 60%; padding: 0%; margin: 0%;
+            }
+        }
+
+        @media screen and (min-width:760px) and (max-width:1280px){
+            .box1{
+                width: 60vw; height: 60%; padding: 3%; margin: 6%;
+                
+            }
+            .Boxm{margin: 3% 10% 4% 10%; padding: 10%;}
+        }
+
+    </style>
+    <script type="text/javascript" src="register.js"></script>
+</head>
+<body > 
+    <div> <a style="padding: 10px;color:white; text-decoration: none;" href="homepage.html">Back to Home Page</a>
+        <h2 style="text-align: center; color: blue;">REGISTRATION PAGE</h2>
+    </div>
+    <div class="Boxm">
+        <div class="box1">
+            <form id="myform" method="post" action="https://fair-pants-tuna.cyclic.app/Register">
+              
+              <span class="input-group p-2">
+                <label class="form-label " for="name"><span class="bi bi-person-fill p-2" ></span></label>
+                <input required class="form-control "  type="text" placeholder="Enter username *" onblur="namecheck()" id="name" name="username">
+               </span>  <span style="color: rgb(255, 8, 0); padding-left: 10%;" id="nameerror"></span>        
+              
+                <span class="input-group p-2">   
+                <label for="mail" class="form-label"><span class="bi bi-envelope-fill p-2"></span></label>
+                <input required class="form-control" type="email" placeholder="Enter mail@example.com *" onblur="mailcheck()" id="mail" name="mail"></span>
+                <span style="color: rgb(255, 8, 0); padding-left: 10%;" id="mailerror"></span>
+               
+                <span class="input-group p-2">
+                <label for="pw" class="form-label"><span class="bi bi-lock-fill p-2"></span></label>
+                <input required class="form-control" type="password" placeholder="Enter password *" id="pw" name="password" onblur="pwcheck()"></span>
+                <span style="color: rgb(255, 8, 0); padding-left: 10%;" id="pwerror"></span>
+                
+                <span class="input-group p-2">
+                 <label class="form-label" for="cpw"><span class="bi bi-lock-fill p-2"></span></label>
+                <input required class="form-control" type="password" placeholder="Confirm password *" id="cpw" onblur="cpwcheck()"></span>
+                <span style="color: rgb(255, 8, 0); padding-left: 10%;" id="cpwerror"></span>    
+                
+                <span class="input-group p-2">
+                <label class="form-label" for="phone"><span class="bi bi-phone-fill p-2"></span></label>
+                <input required class="form-control" type="text" placeholder="Mobile Number" id="phone" name="mobile" onblur="mbcheck()"></span>
+                <span style="color: rgb(255, 8, 0); padding-left: 10%;" id="mberror"></span>
+                
+                <span class="input-group">
+                    <span class="gender"><input type="radio" name="gender" style="display: none;"> </span>
+                <span class="gender"><input type="radio" name="gender" value="male"> Male </span>
+                <span class="gender"><input type="radio" name="gender" value="Female"> Female </span>
+
+                </span>
+                <p class="che"><input type="checkbox" id="check"> I agreed with <a href="#">Terms & conditions</a> *
+                    <p style="padding-left: 10%;" id="checkerror"></p></p>
+
+                <div style="margin: 1% 1% 2% 25%;" ><button type="submit" class="btn btn-info  w-75 btn1" id="regis" onclick="register()">REGISTER</button></div>
+
+
+                
+                <p class="tx1" style="color: rgb(247, 154, 4);">Must fill * indicated fields 
+                    <span style="float: right; padding-right: 4px;"><a style="text-decoration: none; text-decoration-color: rgb(32, 1, 85); font-weight: bold;" href="loginpage.html">Login</a></span></p> 
+                        
+                
+    </div>
+       </form> 
+    </div>
+    
+</body>  
+</html>

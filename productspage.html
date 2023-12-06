@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop-Products</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script rel="text/javascript" src="../clientui/node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(to bottom right, rgb(179, 248, 250),rgb(250, 234, 147)); 
+            background-repeat: no-repeat; background-size: cover; height:max-content;
+        }
+
+        .new{ display: grid; grid-template-rows: auto auto auto;}
+        .head1{
+            background-color: rgba(0, 0, 0, 0.288); /**height: 60px; width:100%;**/
+        }
+        .foot1{
+            background-color: rgba(5, 4, 4, 0.833); 
+        }
+    </style>
+    <script type="text/javascript" src="../clientui/products1.js"></script>
+</head>
+<body onload="bodyload()" >
+    <div class="new">
+        <div>
+            <header class="head1 d-flex justify-content-between">
+                <div><p class="text-danger ms-2" ><span style="font-size:35px;">E-SHOP</span>.in</p></div>
+                <div class="p-2 pe-5 ">
+                    <a href="homepage.html" class="pe-4 text-white">Signout</a>
+                    <a href="#"><span class="bi bi-cart text-white"></span></a>
+                </div>
+            </header>    
+        </div>
+
+        <div>
+            <main class="main1 row">
+                <nav class="ms-2 col-2">
+                    <select id="categories" onchange="categorychange()" class="form-select">
+                        <option selected value="all">All</option>
+                        <option value="kids">kids</option>
+                        <option value="women">women</option>
+                        <option value="men">men</option>
+                    </select>
+                </nav>
+    
+                <section  id="items" class="d-flex flex-wrap col-9 ">
+                    
+                </section>
+            </main>
+        </div>
+
+        <div>
+            <footer class="foot1 d-flex justify-content-between ">
+                <div><p class="text-white ps-2">contact us: <a href="#">E-Shop@gmail.in</a></p></div>
+                <div><p > <a class="pe-4 text-white text-decoration-none" href="#">&copy; CopyRighted</a></p></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
