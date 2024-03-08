@@ -38,7 +38,7 @@ function loadproducts( products1 ){
         <div class="card-header text-center"> <h4>${result.category.toUpperCase()}</h4> </div>
         
         <div class="card-body">
-        <img src="${result.image}" alt="productimage" width="70%" class="card-img" style="box-shadow:0px 0px 10px 0.65px black; display:flex; justify-content: center; align-items:center;"/>
+        <img src="${result.image}" alt="productimage" width="70%" aspect-ratio: 'auto'  class="card-img" style="box-shadow:0px 0px 10px 0.65px black; display:flex; justify-content: center; align-items:center;"/>
         </div>
         
         <div class="card-footer">
